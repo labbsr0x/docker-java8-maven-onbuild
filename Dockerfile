@@ -1,4 +1,4 @@
-FROM maven:3-jdk-8-alpine
+FROM maven:3-jdk-8
 
 # create a Maven repo to store the downloaded jars
 RUN mkdir -p /usr/maven_repo

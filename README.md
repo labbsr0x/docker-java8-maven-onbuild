@@ -81,3 +81,10 @@ FROM labbsr0x/java8-maven-onbuild
 </project>
 ```
 * Build your image: `docker build -t <your_image_name> .`
+
+
+## Notice this
+
+We have tried to use Alpine version but we have some issues with Java8, specially using snappy compression that needs some native libs from the S.O. which we had no success installing. So we decided to move away from Alpine, from now. For more details on the issue: https://github.com/gliderlabs/docker-alpine/issues/11
+
+If you want an Alpine version, please be careful with the native requirements your application has. Our problem appeared when using KAFKA client with Snappy compression.
